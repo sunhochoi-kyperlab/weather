@@ -1,0 +1,364 @@
+/* weather */
+.info-area{
+  margin-top: 97px;
+}
+#now .info-area{
+  margin-top: 97px;
+}
+.updated{
+  position: absolute;
+  top: 26px;
+  right: 47px;
+  font-size: 26px;
+  color: #acacac;
+}
+.location{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 40px;
+  line-height: 150%;
+  text-indent: 5px;
+  text-align: center;
+  color: #f9f9f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &.comma span:first-child::after {
+    content: ',';
+  }
+  &.mark:first-child::before{
+    content: '';
+    display: inline-block;
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    vertical-align: -8%;
+    background: url('./img/ico_current.png') no-repeat 0 0;
+  }
+}
+.spot{
+  margin-top: 65px;
+  width: 100%;
+  height: 315px;
+  .img{
+    margin-top: 32px;
+    margin-left: 66px;
+    float: left;
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    h2{
+      margin-left: 87px;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .temp{
+    margin-right: 122px;
+    float: right;
+    width: 300px;
+    height: 100%;
+    color: #f9f9f9;
+    text-align: center;
+    h3{
+      margin-top: 34px;
+      margin-left: -24px;
+      font-family: 'NotoSansCJKkr-Regular';
+      font-size: 100px;
+    }
+    p{
+      margin-top: 35px;
+      margin-left: -13px;
+      font-size: 40px;
+      line-height: 110%;
+    }
+  }
+}
+.table{
+  margin: 38px auto 0;
+  width: 100%;
+  height: 333px;
+  ol{
+    margin-left: 57px;
+    width: 725px;
+    height: 100%;
+    overflow: hidden;
+  }
+  li{
+    display: block;
+    float: left;
+    width: 144px;
+    height: 100%;
+    border-right: 1px solid #3c3d4c;
+    &:last-child{
+        border-right: none;
+    }
+  }
+  dl{
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    color: #acacac;
+    text-align: center;
+    font-family: 'NotoSansCJKkr-Medium';
+    dt{
+        margin-top:4px;
+    }
+  }
+  .icon{
+    margin: 36px auto 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .temperature{
+    margin-top: 49px;
+  }
+  .daily-bar{
+      display: block;
+      width: 6px;
+      height: 49px;
+      background: #464646;
+      border-radius: 49px;
+      margin: 19px auto 14px;
+  }
+  .temper-2{
+    // color: #8dbeff;
+  }
+  .precipitation{
+    margin-top: 37px;
+    margin-left: 10px;
+    font-size: 30px;
+    i{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url('./img/ico_precipitation.png') no-repeat 0 0;
+      background-size: 30px 60px;
+      vertical-align: -14%;
+      margin-right: 7px;
+    }
+  }
+  .sel {
+    dl{
+      font-family: 'NotoSansCJKkr-Regular';
+      color: #f9f9f9;
+    }
+    .precipitation{
+      color: #ffffff;
+      i{
+        background-position: 0 -30px;
+      }
+    }
+  }  
+  &.daily{
+    .icon{
+        margin-top: 20px;
+    }
+    .temperature{
+        margin-top: 24px;
+    }
+ }
+}
+
+.indicator{
+  position: absolute;
+  bottom: 64px;
+  width: 100%;
+//   height: 22px;
+  text-align: center;
+  font-size: 0;
+  & > i{
+    margin: 0 9px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+  & > .sel {
+    width: 20px;
+    height: 20px;
+    background-color: #00b1fb;
+  }
+}
+
+/* delete city */
+#delete h3 {
+  width: 675px;
+  margin-right: 100px;
+  margin-top: 22px;
+}
+#delete .message {
+  margin-top: 300px;
+}
+#delete .list {
+  background: #0b0d1f;
+}
+
+/* setting */
+#setting{
+  .list{
+      background: transparent;
+    .list-item{
+        height: 104px;
+        border-color: #31345f;
+    }
+  }
+}
+.radio {
+    font-size: 35px;
+    line-height: 1;
+    label{
+    display: block;
+    padding-left: 45px;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    }
+    span {
+    position: relative;
+    display: block;
+    height: 60px;
+    padding-left: 89px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 100%;
+        border: 3px solid #ffffff;
+    }
+    }
+    input[type="radio"] {
+    display:none;
+    &:checked + span {
+        color: #ffffff;
+        &::after{
+        position: absolute;
+        top: 3px;
+        left: 13px;
+        content: '';
+        background-color: #00b1fb;
+        border-radius: 100%;
+        display: block;
+        width: 34px;
+        height: 34px;
+        }
+    }
+    }
+}
+
+.gps {
+  font-size: 35px;
+  line-height: 1;
+  span {
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 31px;
+  }
+  .coords {
+    float: right;
+    padding-top: 31px;
+    max-width: 450px;
+    font-size: 35px;
+    text-align: right;
+    color: #ffffff;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+/* add city */
+#add .message {
+  margin-top: 200px;
+}
+#add .fix-item{
+    background: #fff;
+    height: 99px;
+    margin: 15px;
+    border-radius: 15px;
+  input[type="text"]{
+    font-size: 33px;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 39px;
+    width: 880px;
+    line-height: 99px;
+    &::-webkit-input-placeholder{
+      color: #333333;
+    }
+  }
+  .close{
+    position: absolute;
+    top: 15px;
+    right: 137px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url('./img/ico_search.png') no-repeat 0 0;
+    &:active{
+      background-color: #b4b6c6;
+    }
+    &.dis{
+      background-position: 0 -140px;
+    }
+  }
+  .search-bar{
+    display: block;
+    width: 2px;
+    height: 60px;
+    background: #919191;
+    position: absolute;
+    right: 120px;
+    top: 20px;
+    &.dis{
+      display: none;
+    }
+  }
+  .search{
+    position: absolute;
+    top: 15px;
+    right: 33px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url('./img/ico_search.png') no-repeat -72px 0;
+    &:active{
+      background-color: #b4b6c6;
+    }
+    &.dis{
+      background-position: -70px -140px;
+    }
+  }
+  & + .list {
+    background: transparent;
+    .scroll-container{
+        padding-right: 15px;
+    }
+  }
+}
+.list.result-list{
+  .list-item{
+    &.active, &:active{
+    //   background: url('./img/li_style3_press.png') no-repeat 0 0;
+    }
+    h3{
+      width: 1069px;
+      margin-right: 50px;
+      margin-top: 25px;
+    }
+  }
+}
